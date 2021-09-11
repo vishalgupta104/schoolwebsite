@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+        integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>MODEL WEBSITE</title>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+        <a href="index.html"><img src="./image/logonew.jpg" alt="logo" style="border-radius: 50px; width: 150px;"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                   <li><a href="gallery.html">GALLERY</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>CONTACT US</h1>
+
+    </section>
+     
+     <!-------CONTACT US-->
+     <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29161779.59616174!2d80.9461592!3d26.8467088!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1212e2d8dad3%3A0xfed9fb1be7ecc9f8!2sKidzee%20Khatauli!5e0!3m2!1sen!2sin!4v1625670879737!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+     </section>
+     
+          <section class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                 <i class="fa fa-home"></i>
+                 <span>
+                   <h5> Khatauli, Uttar Pradesh</h>
+                 </span>
+                 </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+91 9634030072</h5>
+                        <p>MONDAY TO SATURDAY, 10 AM TO 6 PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>wembleyacademy@gmail.com</h5>
+                        <p>EMAIL US YOUR QUERY</p>
+                    </span>
+                </div>
+                </div>
+                <div class="contact-col">
+                   <form action="formhandler.php" method="post">
+                       <input type="text"  name="name"   placeholder="enter your name" required>
+                    <input type="email" name="email" placeholder="enter your email" required>
+                    <input type="text"  name="subject" placeholder="enter your subject" required>
+               <textarea rows="8" name="message" placeholder="message"></textarea>
+                <button type="submit" class="hero-btn red-btn">SEND MESSAGE</button>
+
+                   </form>
+
+
+
+                  </div>
+
+
+            </div>
+
+          </section>
+
+
+
+
+
+   
+
+    <!--- footer-->
+
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>A good school is a place where children learn enough worthwhile things to make a strong start in life,<br> where a
+            foundation is laid that supports later learning, and where children develop the desire to learn more.</p>
+        <p>© Wembley Academy , Khatuli. All right reserved</p>
+
+    </section>
+
+    <!--- footer ends-->
+
+
+    <!--java script-->
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+    <!--java script ends-->
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+        integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>MODEL WEBSITE</title>
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+        <a href="index.html"><img src="./image/logonew.jpg" alt="logo" style="border-radius: 50px; width: 150px;"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+       <h1>Glimpse of school</h1>
+
+    </section>
+<!---gallery start-->
+
+<section class="virhead">
+    <ul class="ulclass">
+     <li class="list active" data-filter="all">ALL</li>
+    <li class="list" data-filter="event">EVENT</li>
+    <li class="list" data-filter="media">MEDIA</li>
+    <li class="list" data-filter="crs">CREATIVE STUDENT</li>
+    </ul>
+    <div class="product">
+      <div class="itemBox" data-item="event"><img src="./gimg/event1.jpg" ></div>
+    <div class="itemBox" data-item="media"><img src="./gimg/media1.jpg"></div>
+    <div class="itemBox" data-item="crs"><img src="./gimg/crs1.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event2.jpg"></div>
+    <div class="itemBox" data-item="media"><img src="./gimg/media2.jpg"></div>
+    <div class="itemBox" data-item="crs"><img src="./gimg/crs2.jpg"></div>
+     <div class="itemBox" data-item="event"><img src="./gimg/event3.jpg"></div>
+    <div class="itemBox" data-item="media"><img src="./gimg/media3.jpg"></div>
+    <div class="itemBox" data-item="crs"><img src="./gimg/crs3.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event4.jpg"></div>
+    <div class="itemBox" data-item="media"><img src="./gimg/media4.jpg"></div>
+    <div class="itemBox" data-item="crs"><img src="./gimg/crs4.jpg"></div>
+    <div class="itemBox" data-item="crs"><img src="./gimg/crs5.jpg"></div>
+    <div class="itemBox" data-item="crs"><img src="./gimg/crs6.jpg"></div>
+    <div class="itemBox" data-item="crs"><img src="./gimg/crs7.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event5.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event6.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event7.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event8.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event9.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event10.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event11.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event12.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event13.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event14.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event15.jpg"></div>
+    <div class="itemBox" data-item="event"><img src="./gimg/event16.jpg"></div>
+
+
+    </div>
+
+</section>
+
+
+<!-- gallery ends-->
+    <!--- footer-->
+    
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>A good school is a place where children learn enough worthwhile things to make a strong start in life,<br> where a
+            foundation is laid that supports later learning, and where children develop the desire to learn more.</p>
+        <p>© Wembley Academy , Khatuli. All right reserved</p>
+    
+    </section>
+
+    <!--- footer ends-->
+    
+    
+    <!--java script-->
+    
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        let list = document.querySelectorAll('.list');
+        let itemBox = document.querySelectorAll('.itemBox');
+
+        for(let i = 0; i<list.length ; i++){
+            list[i].addEventListener('click', function(){
+                for(let j = 0;j<list.length;j++){
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+                
+                let dataFilter = this.getAttribute('data-filter');
+                for(let k = 0; k<itemBox.length;k++){
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    
+                    if(itemBox[k].getAttribute('data-item') == dataFilter || dataFilter == "all"){
+                                          itemBox[k].classList.remove('hide');
+                                        itemBox[k].classList.add('active');
+
+
+                    }
+
+
+                }
+
+
+            })
+        }
+
+    </script>
+    <!--java script ends-->
+    </body>
+    
+    </html>
